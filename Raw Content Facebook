@@ -1,0 +1,36 @@
+/ip firewall raw
+add action=add-dst-to-address-list address-list=FACEBOOK \
+    address-list-timeout=1d chain=prerouting comment=FACEBOOK content=\
+    .facebook.com dst-address-list=!lokal src-address-list=lokal
+
+add action=add-dst-to-address-list address-list=FACEBOOK \
+    address-list-timeout=1d chain=prerouting content=.facebook.net \
+    dst-address-list=!lokal src-address-list=lokal
+
+add action=add-dst-to-address-list address-list=FACEBOOK \
+    address-list-timeout=1d chain=prerouting content=.fbcdn.net \
+    dst-address-list=!lokal src-address-list=lokal
+
+add action=add-dst-to-address-list address-list=FACEBOOK \
+    address-list-timeout=1d chain=prerouting content=.fbsbx.com \
+    dst-address-list=!lokal src-address-list=lokal
+
+add action=add-dst-to-address-list address-list=FACEBOOK \
+    address-list-timeout=1d chain=prerouting content=fb.com dst-address-list=\
+    !lokal src-address-list=lokal
+
+add action=add-dst-to-address-list address-list=FACEBOOK \
+    address-list-timeout=1d chain=prerouting content=fb.gg dst-address-list=\
+    !lokal src-address-list=lokal
+
+add action=add-dst-to-address-list address-list=FACEBOOK \
+    address-list-timeout=1d chain=prerouting content=fbwat.ch \
+    dst-address-list=!lokal src-address-list=lokal
+
+add action=add-dst-to-address-list address-list=FACEBOOK \
+    address-list-timeout=1d chain=prerouting content=messenger.com \
+    dst-address-list=!lokal src-address-list=lokal
+
+add action=add-dst-to-address-list address-list=FACEBOOK \
+    address-list-timeout=1d chain=prerouting content=m.me dst-address-list=\
+    !lokal src-address-list=lokal
