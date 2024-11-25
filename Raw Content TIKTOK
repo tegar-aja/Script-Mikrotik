@@ -1,0 +1,22 @@
+/ip firewall raw
+add action=add-dst-to-address-list address-list=TIKTOK address-list-timeout=\
+    1d chain=prerouting comment=TIKTOK content=.tiktok.com dst-address-list=\
+    !lokal src-address-list=lokal
+add action=add-dst-to-address-list address-list=TIKTOK address-list-timeout=\
+    1d chain=prerouting content=.tiktokv.com dst-address-list=!lokal \
+    src-address-list=lokal
+add action=add-dst-to-address-list address-list=TIKTOK address-list-timeout=\
+    1d chain=prerouting content=.tiktokcdn.com dst-address-list=!lokal \
+    src-address-list=lokal
+add action=add-dst-to-address-list address-list=TIKTOK address-list-timeout=\
+    1d chain=prerouting content=.byteoversea.com dst-address-list=!lokal \
+    src-address-list=lokal
+add action=add-dst-to-address-list address-list=TIKTOK address-list-timeout=\
+    1d chain=prerouting content=.ibyteimg.com dst-address-list=!lokal \
+    src-address-list=lokal
+add action=add-dst-to-address-list address-list=TIKTOK address-list-timeout=\
+    1d chain=prerouting content=.ibytedtos.com dst-address-list=!lokal \
+    src-address-list=lokal
+add action=add-dst-to-address-list address-list=TIKTOK address-list-timeout=\
+    1d chain=prerouting content=.myqcloud.com dst-address-list=!lokal \
+    src-address-list=lokal
