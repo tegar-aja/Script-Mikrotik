@@ -1,0 +1,12 @@
+/ip firewall raw
+add action=add-dst-to-address-list address-list=SNACKVIDEO \
+    address-list-timeout=1d chain=prerouting comment=SNACKVIDEO content=\
+    .snackvideo.com dst-address-list=!lokal src-address-list=lokal
+
+add action=add-dst-to-address-list address-list=SNACKVIDEO \
+    address-list-timeout=1d chain=prerouting content=.myqcloud.com \
+    dst-address-list=!lokal src-address-list=lokal
+
+add action=add-dst-to-address-list address-list=SNACKVIDEO \
+    address-list-timeout=1d chain=prerouting content=.snackvideo.in \
+    dst-address-list=!lokal src-address-list=lokal
